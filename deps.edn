@@ -4,4 +4,10 @@
 
  :aliases
  {:cljs {:extra-deps {cider/cider-nrepl {:mvn/version "0.17.0-SNAPSHOT"}
-                      refactor-nrepl {:mvn/version "2.4.0-SNAPSHOT"}}}}}
+                      refactor-nrepl {:mvn/version "2.4.0-SNAPSHOT"}
+                      thheller/shadow-cljsjs {:mvn/version "0.0.12"}
+                      reagent {:mvn/version "0.8.1"
+                               :exclusions [cljsjs/react
+                                            cljsjs/react-dom
+                                            cljsjs/react-dom-server
+                                            cljsjs/create-react-class]}}}}}

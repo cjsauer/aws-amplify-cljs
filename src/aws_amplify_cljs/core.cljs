@@ -1,3 +1,12 @@
-(ns aws-amplify-cljs.core)
+(ns aws-amplify-cljs.core
+  (:require [reagent.core :as r]))
 
-(js/console.log "Hello, world!")
+(defn hello-world
+  []
+  [:h1 "Hello, World!"])
+
+(defn mount
+  []
+  (r/render [hello-world] (js/document.getElementById "app")))
+
+(mount)
