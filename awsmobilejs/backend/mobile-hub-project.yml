@@ -1,36 +1,7 @@
 --- !com.amazonaws.mobilehub.v0.Project 
+apps:
+  web: !com.amazonaws.mobilehub.v0.AppDO {}
 features:
-  cloudlogic: !com.amazonaws.mobilehub.v0.CloudLogic 
-    components:
-      sampleCloudApi: !com.amazonaws.mobilehub.v0.API 
-        attributes:
-          disable-aws-auth: false
-          name: sampleCloudApi
-          requires-signin: false
-          sdk-generation-stage-name: Development
-        paths:
-          /items: !com.amazonaws.mobilehub.v0.Function 
-            description: 'Handler for calls to resource path : /items/{proxy+}'
-            environment: {}
-            handler: index.handler
-            hashcode: J8HHyqwFGPpO9srINiT0nFsPEcZc/Wyr0MC+1d5r1W8=
-            memorySize: '128'
-            modified: '2018-06-03T21:49:39.147+0000'
-            name: sampleLambda
-            runtime: nodejs6.10
-            timeout: '3'
-            version: 4ISrk_ZdIwNZbUCx5ecdZ64._1eihPYa
-          '/items/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
-            description: 'Handler for calls to resource path : /items/{proxy+}'
-            environment: {}
-            handler: index.handler
-            hashcode: J8HHyqwFGPpO9srINiT0nFsPEcZc/Wyr0MC+1d5r1W8=
-            memorySize: '128'
-            modified: '2018-06-03T21:49:39.147+0000'
-            name: sampleLambda
-            runtime: nodejs6.10
-            timeout: '3'
-            version: 531nzwVz3V1qxP4OhjR6r4RWOgiToLQT
   content-delivery: !com.amazonaws.mobilehub.v0.ContentDelivery 
     attributes:
       enabled: true
