@@ -1,0 +1,6 @@
+{
+	"SourceDir": "src",
+	"DistributionDir": "public",
+	"BuildCommand": "yarn run release",
+	"StartCommand": "yarn run watch"
+}
