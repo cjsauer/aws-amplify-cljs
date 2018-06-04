@@ -4,6 +4,7 @@ node_modules/
 .cpcache/
 .nrepl-port
 public/js/
+*.log
 
 #awsmobilejs
 appsync-info.json

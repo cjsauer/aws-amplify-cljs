@@ -1,6 +1,7 @@
 {
   "scripts": {
     "watch": "shadow-cljs watch app",
+    "repl": "shadow-cljs cljs-repl app",
     "release": "shadow-cljs release app"
   },
   "devDependencies": {
