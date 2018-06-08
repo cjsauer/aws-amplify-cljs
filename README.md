@@ -33,7 +33,15 @@ exactly AWS is handling authorization of local development environments.
 
 # Development Setup
 
-Install dependencies and start [shadow-cljs][3] watch process:
+First, compile and watch the local [test-idea][10] React library:
+
+```bash
+cd react-lib/
+npm install
+npm run lib:watch
+```
+
+Next, install dependencies and start [shadow-cljs][3] watch process:
 
 ```bash
 yarn install
@@ -64,6 +72,12 @@ connected:
 
 You should see an alert dialog appear in your browser window. You're all set up!
 Any code changes you make will now be hot-loaded into the app.
+
+
+To summarize, we have a ClojureScript project that depends on a _local NPM package_
+which exists under `react-lib`, and is called `test-idea`. We build and watch
+the `test-idea` package, we build and watch the ClojureScript project, and we
+started a REPL. Now, if anything changes, we'll get live updates.
 
 # AWS Amplify Setup (deployment and backend)
 
@@ -110,3 +124,4 @@ awsmobile publish
 [7]: https://aws.github.io/aws-amplify/
 [8]: https://aws.github.io/aws-amplify/media/api_guide
 [9]: https://aws.github.io/aws-amplify/media/analytics_guide
+[10]: 
