@@ -12,6 +12,14 @@ your request to API Gateway echoed in the console. You can see the code for this
 endpoint inside of the [./awsmobilejs/backend/cloud-api/sampleLambda][4]
 directory.
 
+Try entering a username into the input field and clicking the submit button. You
+should see your username logged to the console. This demonstrates our ability to
+depend on _local React component libraries_ and use them in ClojureScript applications.
+In this case, under the `react-lib/` directory is an NPM package written by
+Gabriel called [test-idea][10]. The ClojureScript front-end requires this package
+and then mounts its example form to the DOM, passing in event handlers and other
+properties.
+
 The code for the home page is at [./src/aws_amplify_cljs/core.cljs][6]. You can
 see that there are calls to both the [API][8] and [Analytics][9] modules of
 AWS Amplify.
@@ -124,4 +132,4 @@ awsmobile publish
 [7]: https://aws.github.io/aws-amplify/
 [8]: https://aws.github.io/aws-amplify/media/api_guide
 [9]: https://aws.github.io/aws-amplify/media/analytics_guide
-[10]: 
+[10]: https://github.com/Gabryk/TestIdea
