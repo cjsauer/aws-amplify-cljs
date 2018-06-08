@@ -14,6 +14,7 @@
     "create-react-class": "^15.6.3",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "react-dom-server": "^0.0.5"
+    "react-dom-server": "^0.0.5",
+    "test-idea": "file:./react-lib"
   }
 }

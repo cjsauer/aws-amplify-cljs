@@ -1,6 +1,7 @@
 ;; shadow-cljs configuration
 {:deps {:aliases [:cljs]}
  :nrepl {:middleware [refactor-nrepl.middleware/wrap-refactor]}
+ :source-paths ["src"]
  :builds
  {:app {:target :browser
         :output-dir "public/js"

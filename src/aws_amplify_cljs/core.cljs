@@ -1,7 +1,10 @@
 (ns aws-amplify-cljs.core
   (:require [reagent.core :as r]
             ["aws-amplify" :default Amplify :refer [Analytics API]]
-            ["/aws-exports.js" :default aws-exports]))
+            ["/aws-exports.js" :default aws-exports]
+            ["test-idea" :default TestIdea]))
+
+(def test-idea (r/adapt-react-class TestIdea))
 
 (defn get-items
   []
@@ -17,9 +20,16 @@
 
 (defn hello-world
   []
-  [:div
-   [:h1 "Hello, World!"]
-   [items-btn]])
+  (let [username (r/atom "")
+        on-change #(reset! username %)
+        on-click #(js/console.log @username)]
+    (fn []
+      [:div
+       [:h1 "Hello, World!"]
+       [items-btn]
+       [test-idea {:value @username
+                   :onChange on-change
+                   :onClick on-click}]])))
 
 (defn mount
   []
